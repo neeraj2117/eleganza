@@ -19,7 +19,7 @@ const app = express();
 const PORT = process.env.PORT || 4000;
 
 mongoose
-  .connect(process.env.MONGO_UR)
+  .connect(process.env.MONGO_URL)
   .then(() => console.log("MongoDB Connected!"))
   .catch((error) => console.log(error));
 
