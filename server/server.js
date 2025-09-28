@@ -2,6 +2,7 @@ const express = require("express");
 const mongoose = require("mongoose");
 const cookieParser = require("cookie-parser");
 const cors = require("cors");
+require('dotenv').config();
 const authRouter = require('./routes/auth/auth-routes');
 const adminProductsRouter = require('./routes/admin/product-routes');
 const adminOrderRouter = require('./routes/admin/order-routes');
@@ -18,14 +19,12 @@ const app = express();
 const PORT = process.env.PORT || 4000;
 
 mongoose
-  .connect(
-    "mongodb+srv://royalnanu21_db_user:royalnanu21_db_user@cluster0.9nfm78m.mongodb.net/"
-  )
+  .connect(process.env.MONGO_UR)
   .then(() => console.log("MongoDB Connected!"))
   .catch((error) => console.log(error));
 
 app.use(cors({
-  origin: "http://localhost:5173",
+  origin: ["http://localhost:5173", "https://eleganzaaaa.onrender.com"],
   methods: ["GET", "POST", "DELETE", "PUT", "OPTIONS"],
   allowedHeaders: [
     "Content-Type",
@@ -62,3 +61,5 @@ app.post("/test", (req, res) => {
 app.listen(PORT, () =>
   console.log(`Server is now running at port: ${PORT}`)
 );
+
+app.get("/", (req, res) => res.send("Backend is running!"));
