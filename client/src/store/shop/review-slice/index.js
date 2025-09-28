@@ -1,3 +1,4 @@
+import { API_URL } from "@/config/api";
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
 
@@ -22,7 +23,7 @@ export const addReview = createAsyncThunk(
   "/order/addReview",
   async ({ formdata, token }) => {   // 👈 expects a single object with formdata + token
     const response = await axios.post(
-      `http://localhost:4000/api/shop/review/add`,
+      `${API_URL}/api/shop/review/add`,
       formdata,
       {
         headers: {
@@ -34,11 +35,9 @@ export const addReview = createAsyncThunk(
   }
 );
 
-
-
 export const getReviews = createAsyncThunk("/order/getReviews", async (id) => {
   const response = await axios.get(
-    `http://localhost:4000/api/shop/review/${id}`
+    `${API_URL}/api/shop/review/${id}`
   );
 
   return response.data;
