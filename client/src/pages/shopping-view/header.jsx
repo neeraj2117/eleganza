@@ -211,7 +211,7 @@ function ShoppingHeader() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 w-full border-b border-gray-200 bg-background transition-shadow ${
+      className={`fixed top-0 left-0 mb-20 right-0 z-50 w-full border-b border-gray-200 bg-background transition-shadow ${
         scrolled ? "shadow-md" : ""
       }`}
     >
