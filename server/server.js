@@ -24,7 +24,7 @@ mongoose
   .catch((error) => console.log(error));
 
 app.use(cors({
-  origin: ["http://localhost:5173", "https://eleganzaaaa.onrender.com"],
+  origin: "https://eleganza-backend.onrender.com",
   methods: ["GET", "POST", "DELETE", "PUT", "OPTIONS"],
   allowedHeaders: [
     "Content-Type",
