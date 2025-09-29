@@ -86,7 +86,7 @@ function SearchProducts() {
 
   return (
     <div className="container font-[Rajdhani] mx-auto md:px-6 px-4 py-8">
-      <div className="flex justify-center mb-8">
+      <div className="flex justify-center mb-8 mt-15">
         <Input
           value={keyword}
           name="keyword"
