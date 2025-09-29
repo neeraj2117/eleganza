@@ -14,7 +14,7 @@ function AuthLayout() {
                 <Outlet/>
             </div>
         </div>
-    );
+    );ro
 }
 
 export default AuthLayout;

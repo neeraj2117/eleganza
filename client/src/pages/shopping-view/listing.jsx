@@ -137,7 +137,7 @@ function ShoppingListing() {
   
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-[250px_1fr] font-[Rajdhani] gap-6 p-4 md:p-6">
+    <div className="grid grid-cols-1 mt-20 md:grid-cols-[250px_1fr] font-[Rajdhani] gap-6 p-4 md:p-6">
       {/* Sidebar Filters */}
       <ProductFilter filters={filters} handleFilter={handleFilter} />
 
