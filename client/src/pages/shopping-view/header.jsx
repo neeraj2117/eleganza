@@ -152,6 +152,8 @@ function HeaderRightContent() {
 function ShoppingHeader() {
   const { isAuthenticated, user } = useSelector((state) => state.auth);
   const [scrolled, setScrolled] = useState(false);
+  const [openMobileMenu, setOpenMobileMenu] = useState(false); // ✅ added this
+  const navigate = useNavigate(); 
 
   useEffect(() => {
     const handleScroll = () => {
